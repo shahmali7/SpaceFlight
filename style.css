@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #0a071a;
+  color: white;
+  height: 100vh;
+}
+header {
+  background: rgba(16, 8, 42, 0.5);
+}
+.Navbar {
+  height: 90px;
+
+}
+.logo-img {
+  cursor: pointer;
+  height: 70px;
+  margin-left: 30px;
+}
+#check {
+  display: none;
+}
+.Nav-right {
+  list-style: none;
+  float: right;
+  margin: 0;
+  padding-top: 25px;
+  display: flex;
+}
+.Nav-right li {
+  display: inline-block;
+  margin: auto 20px;
+}
+.Search {
+  height: 35px;
+  background: transparent;
+  border: 1px solid grey;
+  border-radius: 50px;
+  padding-left: 10px;
+  color: white;
+}
+.Search:hover {
+  border: 1px solid #c6ca02;
+}
+.h2-header {
+  display: flex;
+  gap: 7px;
+}
+.go-library {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: all 0.3s linear 0s;
+}
+.go-library:hover {
+  color: gold;
+  padding-bottom: 7px;
+  border-bottom: 1.5px solid gold;
+}
+.menu-btn {
+  font-size: 25px;
+  color: white;
+  float: right;
+  line-height: 90px;
+  margin-right: 40px;
+  display: none;
+  cursor: pointer;
+}
+.Body {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.card {
+  height: auto;
+  width: 300px;
+  margin-top: 25px;
+  border: 2px solid darkorange;
+  margin: 15px;
+  border-radius: 5px;
+  padding: 15px;
+  animation: animate 700ms ease-in;
+}
+.Title {
+  margin: 10px auto;
+}
+.new-site {
+  margin: 10px auto;
+  color: gold;
+}
+.Published {
+  margin: 5px auto;
+}
+.card > button {
+  text-align: center;
+  margin: 10px;
+  width: 105px;
+  height: 37px;
+  border-radius: 7px;
+  background: transparent;
+  border: 1px solid gold;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.card > button:hover {
+  border: 1px solid white;
+  color: gold;
+}
+@keyframes animate {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.card:hover {
+  box-shadow: 5px 5px 10px 5px #c6ca02;
+}
+.card-img {
+  height: 150px;
+  width: 100%;
+}
+.hamburger {
+  display: none;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 6px 0;
+}
+/* Library css*/
+.back-home {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  float: right;
+  padding-top: 30px;
+  margin-right: 50px;
+  transition: all 0.3s linear 0s;
+}
+.back-home:hover{
+  padding-bottom: 7px;
+  border-bottom: 1.5px solid white;
+}
+#libBody {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  place-items: center;
+}
+#control {
+  display: none;
+}
+.control {
+  position: relative;
+  font-size: 35px;
+  float: right;
+  cursor: pointer;
+  margin-right: 10px;
+  display: none;
+}
+@media(min-width:1200px){
+  .Body {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+  }
+  
+}
+@media(max-width:1200px){
+  .Body {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+  }
+  .card{
+    width: 80%;
+  }
+}
+@media (max-width: 962px) {
+  .Body {
+    display: grid;
+    grid-template-columns: auto auto ;
+    width: 100%;
+  }
+  .card{
+    width: 80%;
+  }
+  .Nav-right li {
+    margin: auto 10px;
+  }
+
+}
+@media (max-width: 768px) {
+  .Navbar {
+    height: 74px;
+  }
+  .Nav-right {
+    position: fixed;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    transition: all 0.5s;
+    right: -100%;
+    background: rgba(16, 8, 42, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom-left-radius: 50%;
+  }
+  .Nav-right li {
+    display: block;
+  }
+
+  .go-library:hover {
+    border-bottom: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  #check:checked ~ .Nav-right {
+    right: 0;
+  }
+  .Body {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+  }
+  .card {
+    width: 80%;
+    margin: 10px;
+    padding: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .Body {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-btn:focus {
+    color: blue;
+  }
+  .card {
+    width: 80%;
+    margin-top: 25px;
+    margin: 15px;
+    padding: 15px;
+  }
+}
